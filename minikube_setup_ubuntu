@@ -1,5 +1,5 @@
 curl https://raw.githubusercontent.com/rancher/install-docker/master/dist/24.0.7.sh | sh
-echo -e '{\n "exec-opts":["native.cgroupdriver=cgroupfs"]\n' | sudo tee /etc/docker/daemon.json
+echo -e '{\n "exec-opts":["native.cgroupdriver=cgroupfs"]\n}' | sudo tee /etc/docker/daemon.json
 
 sudo systemctl daemon-reload
 sudo systemctl restart docker
